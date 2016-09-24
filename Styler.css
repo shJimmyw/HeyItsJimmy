@@ -1,0 +1,76 @@
+
+body{
+    background-color:azure;
+    background-image:url("images/Ocean.JPG");
+    text-align:center;
+}
+ul{
+    list-style-type:none;
+    padding:0;
+    overflow: hidden;
+    background-color: #354B73;
+    opacity:0.65;
+}
+li{
+    display:inline;
+    float:left;
+}
+li a {
+    font-family:arial;
+    font-size:20px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color:#0C1F41;
+}
+h1{
+    color:#19263C;
+    font-size:160px;
+    font-family:arial;
+    display:inline;
+    text-align:left;
+}
+
+p{
+    color:#19263C;
+    font-size:44px;
+    padding:0;
+    text-align:center;
+    display:inline;
+
+}
+pre{
+    color:#19263C;
+    font-size:21px;
+    text-align:center;  
+    display:inline;
+    font-family:verdana;
+}
+
+#section{
+    width:875px;
+    height:800px;
+    padding:20px;
+    background-color:#354B73;
+    opacity:0.65;
+    font-family:verdana;
+    margin: 0 auto;
+}
+
+button{
+    color:white;
+    background-color:#354B73;
+    text-align:center;
+    display:inline-block;
+    border:none;
+    font-size:26px;
+    padding: 14px 28px;
+    opacity:0.65;
+}
+button:hover{
+    background-color:#0C1F41;
+}

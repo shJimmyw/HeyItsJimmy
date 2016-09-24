@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Hey Its Jimmy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="Styler.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+   
+    <body>
+        <script>
+            $(document).ready(function(){
+                $("#list1").hide();
+                $("#pre1").hide();
+                $("#pre2").hide();
+                $("#button").hide();
+                $("#list1").fadeIn(1700);
+                $("#pre1").fadeIn(1700);
+                $("#pre2").fadeIn(1700);
+                $("#button").fadeIn(1700);
+            });
+        </script>
+        <ul id="list1">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a><li>
+        </ul>
+        <h1><br>Jimmy Wu</h1>
+        <pre id="pre2"><br><br>Developer - Enthusiast - Web Designer
+        </pre>
+        <br><br><br> 
+        <button id="button" type="button" onclick='window.location.href="about.html"'>Enter</button>
+    </body>
+    
+</html>
