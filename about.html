@@ -12,34 +12,54 @@
         <script>
             $(document).ready(function(){
                 $("#section").hide();
-                $("#section").fadeIn(1350);
+                $("#portfolio").hide();
+                $("#contact").hide();
+                $("#section").fadeIn(1470);
+                $("#portfolio").fadeIn(1470);
+                $("#contact").fadeIn(1470);
             });
+            
+            
         </script>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="about.html">About</a><li>
         </ul>
-        <div id ="section" style="text-align: center;">
+        <div id ="section">
             
             <p style="font-size:22px; color:white;">
-                <br><br><br>
-               Hey there and thanks for visiting, I'm Jimmy and I am a web developer 
-               freshly graduated from college. My passion is to learn new technology to develop amazing new
+                <br>
+               Hey there and thanks for visiting, I'm Jimmy and I am a front-end developer 
+               freshly out of college. My passion is to learn new technology to develop amazing new
                engage users in new ways. I am always looking to improve as a 
                developer and reach new heights.
+               <br>
+               I began programming in high school with java as my first language, but it wasn't until
+               I entered my senior year at UC Irvine did I ever even think about pursuing web development.
+               In retrospect, it baffles me that I never even thought about the front end that much 
+               throughout my undergraduate studies.
+               <br>
+               But starting with this website, I hope to fix that. 
+               I've developed this website from scratch using html, CSS, and javascript. Plans are in
+               development for implementing php. 
                <br><br> 
             </p>
-            <p style="font-size:17px; color:white;">  
-                Find me on&nbsp;        
-            </p>
-            <a href = "http://linkedin.com/" ><img src="images/linkedinlogo.png" alt="Linkedin" hspace="2" align="center" width="200" height="45" border="0" ></a>
-            <a href = "http://github.com/shJimmyw" ><img src="images/GitHub.png" alt="Github" align="center" width="145" height="48" border="0" ></a>
             <br><br>
-            <p style="font-size:17px; color:white;">
-                And contact me at&nbsp;
-            </p>
             <br><br>
+        </div>
+        <div id="portfolio">
+            <p>
+               <a href = "http://linkedin.com/" ><img src="images/linkedinlogo.png" alt="Linkedin" hspace="2" align="center" width="200" height="45" border="0" ></a>
+               <a href = "http://github.com/shJimmyw" ><img src="images/GitHub.png" alt="Github" align="center" width="145" height="48" border="0" ></a>
+            </p>
+        </div>
+        <div id="contact">
+            <p style="font-size:22px; color:white;">
+                Email:    jimmyw@heyitsjimmy.com
+                <br>
+                Resume:   here
+            </p>
         </div>
     </body>
 </html>
