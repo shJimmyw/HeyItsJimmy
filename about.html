@@ -14,9 +14,11 @@
                 $("#section").hide();
                 $("#portfolio").hide();
                 $("#contact").hide();
+                $("#links").hide();
                 $("#section").fadeIn(1470);
                 $("#portfolio").fadeIn(1470);
-                $("#contact").fadeIn(1470);
+                $("#contact").fadeIn(1470);               
+                $("#links").fadeIn(1470);
             });
           $(function() {
                 $('[data-popup-open]').on('click', function(e)  {
@@ -60,27 +62,29 @@
             <br><br>
             <br><br>
         </div>
-        <div id="portfolio">
-            <p>
-               <a href = "http://linkedin.com/" ><img src="images/linkedinlogo.png" alt="Linkedin" hspace="2" align="center" width="200" height="45" border="0" ></a>
-               <a href = "http://github.com/shJimmyw" ><img src="images/GitHub.png" alt="Github" align="center" width="145" height="48" border="0" ></a>
-            </p>
-        </div>
-        <div id="contact">
-            <p style="font-size:22px; color:white;">
-                Contact me <a href="#" class="contactme" data-popup-open="contactform">here</a>
-                <br>
-                Resume:   here
-            </p>
-        </div>
-        
+        <p id="links" style="font-size:22px; color:white; margin: 22px;">           
+            <a href = "http://linkedin.com/" ><img src="images/linkedinlogo.png" alt="Linkedin" hspace="2" align="center" width="200" height="45" border="0" ></a>
+            <a href = "http://github.com/shJimmyw" ><img src="images/GitHub.png" alt="Github" align="center" width="145" height="48" border="0" ></a>
+            <button style="margin-top: 22px;" type="button" class="msg" data-popup-open="contactform">Contact</button>
+            <button style="margin-top: 22px;" type="button">Resume</button>
+        </p>
         <div class="modal" data-popup="contactform">
-            <div class="contact">
+            <div class="contact" style="float:left">
                 <h2 style="font-size:47px;">Contact Me</h2>
-                <p>stuff</p>
-                <p>
-                </p>
+                <p style="font-size:20px; margin-right:445px;">Name</p>
+                <br>
+                <input type="text" name="name" required>
+                <br>
+                <p style="font-size:20px; margin-right:445px;">Email</p>
+                <br>
+                <input type="email" name="email" required>
+                <br>
+                <p style="font-size:20px; margin-right:425px;">Message</p>
+                <br>
+                <textarea rows="15" cols="53" style="font-size:18px;" required></textarea>
                 <a class="popup-close" data-popup-close="contactform" href="#">X</a>
+                <br><br>
+                <button type="submit">Submit</button>
             </div>
         </div>
         

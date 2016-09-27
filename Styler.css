@@ -62,25 +62,6 @@ pre{
     position:relative;
 }
 
-#portfolio{
-    background-color:#354B73;
-    opacity:0.65;
-    padding:20px;
-    margin: 10 auto;
-    width:412px;
-    position:absolute;
-    left:503px;
-}
-
-#contact{
-    background-color:#354B73;
-    opacity:0.65;
-    padding:20px;
-    margin: 10 auto;
-    width:412px;
-    position:absolute;
-    right:503px;
-}
 
 button{
     color:white;
@@ -91,6 +72,7 @@ button{
     font-size:26px;
     padding: 14px 28px;
     opacity:0.65;
+    margin-left:14px; 
 }
 button:hover{
     background-color:#0C1F41;
@@ -110,7 +92,6 @@ button:hover{
     max-width:700px;
     height:700px;
     width:90%;
-    padding:32px;
     position:absolute;
     top:50%;
     left:50%;
@@ -145,3 +126,12 @@ button:hover{
     color:#fff;
 }
 
+.popup-close:hover{
+    opacity:.65;
+}
+
+input{
+    width:250px;
+    margin-right:300px;
+    font-family:verdana;
+}
