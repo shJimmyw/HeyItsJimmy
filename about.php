@@ -1,4 +1,4 @@
-
+ 
 <html>
     <head>
         <title>Hey Its Jimmy</title>
@@ -70,21 +70,23 @@
         </p>
         <div class="modal" data-popup="contactform">
             <div class="contact" style="float:left">
-                <h2 style="font-size:47px;">Contact Me</h2>
-                <p style="font-size:20px; margin-right:445px;">Name</p>
-                <br>
-                <input type="text" name="name" required>
-                <br>
-                <p style="font-size:20px; margin-right:445px;">Email</p>
-                <br>
-                <input type="email" name="email" required>
-                <br>
-                <p style="font-size:20px; margin-right:425px;">Message</p>
-                <br>
-                <textarea rows="15" cols="53" style="font-size:18px;" required></textarea>
-                <a class="popup-close" data-popup-close="contactform" href="#">X</a>
-                <br><br>
-                <button type="submit">Submit</button>
+                <form method="post">
+                    <h2 style="font-size:47px;">Contact Me</h2>
+                    <p style="font-size:20px; margin-right:445px;">Name</p>
+                    <br>
+                    <input type="text" name="name" required>
+                    <br>
+                    <p style="font-size:20px; margin-right:445px;">Email</p>
+                    <br>
+                    <input type="email" name="email" required>
+                    <br>
+                    <p style="font-size:20px; margin-right:425px;">Message</p>
+                    <br>
+                    <textarea rows="15" cols="53" style="font-size:18px;" required></textarea>
+                    <a class="popup-close" data-popup-close="contactform" href="#">X</a>
+                    <br><br>
+                    <button type="submit" value="submit">Submit</button>               
+                </form>
             </div>
         </div>
         
