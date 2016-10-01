@@ -1,4 +1,4 @@
- 
+
 <html>
     <head>
         <title>Hey Its Jimmy</title>
@@ -33,8 +33,11 @@
                     e.preventDefault();
                 });
             });
-
+            function submitEmail(){
+                alert('hi');
+            }
         </script>
+        
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -70,7 +73,7 @@
         </p>
         <div class="modal" data-popup="contactform">
             <div class="contact" style="float:left">
-                <form method="post">
+                <form id="email" method="post">
                     <h2 style="font-size:47px;">Contact Me</h2>
                     <p style="font-size:20px; margin-right:445px;">Name</p>
                     <br>
@@ -85,9 +88,10 @@
                     <textarea rows="15" cols="53" style="font-size:18px;" required></textarea>
                     <a class="popup-close" data-popup-close="contactform" href="#">X</a>
                     <br><br>
-                    <button type="submit" value="submit">Submit</button>               
+                    <button type="button" value="submit" onclick="submitEmail()">Submit</button>   
                 </form>
             </div>
+            
         </div>
         
     </body>
