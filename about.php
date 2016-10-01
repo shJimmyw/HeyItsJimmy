@@ -19,22 +19,22 @@
                 $("#portfolio").fadeIn(1470);
                 $("#contact").fadeIn(1470);               
                 $("#links").fadeIn(1470);
-            });
-          $(function() {
-                $('[data-popup-open]').on('click', function(e)  {
-                    var targeted_popup_class = jQuery(this).attr('data-popup-open');
-                    $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
-                    e.preventDefault();
+            });        
+            window.onload = function(){
+                document.getElementById("msg").onclick = function(){
+                    $('#modal').fadeIn(350);
+                };
+        //        document.getElementById("close").onclick = function(){
+        //            $('#modal').fadeOut(350);
+         //       };
+                $(document).on('click',"#close", function(){
+                    $('#modal').fadeOut(350);
                 });
-
-                $('[data-popup-close]').on('click', function(e)  {
-                    var targeted_popup_class = jQuery(this).attr('data-popup-close');
-                    $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
-                    e.preventDefault();
-                });
-            });
+            };
             function submitEmail(){
-                alert('hi');
+                if(document.forms['email'].checkValidity()){
+                    $("#contact").html("<p>Thanks for your message!</p><button id='close' type='button' value='close' >Close</button>");
+                }
             }
         </script>
         
@@ -68,11 +68,11 @@
         <p id="links" style="font-size:22px; color:white; margin: 22px;">           
             <a href = "http://linkedin.com/" ><img src="images/linkedinlogo.png" alt="Linkedin" hspace="2" align="center" width="200" height="45" border="0" ></a>
             <a href = "http://github.com/shJimmyw" ><img src="images/GitHub.png" alt="Github" align="center" width="145" height="48" border="0" ></a>
-            <button style="margin-top: 22px;" type="button" class="msg" data-popup-open="contactform">Contact</button>
+            <button style="margin-top: 22px;" type="button" id="msg" class="msg">Contact</button>
             <button style="margin-top: 22px;" type="button">Resume</button>
         </p>
-        <div class="modal" data-popup="contactform">
-            <div class="contact" style="float:left">
+        <div id="modal" class="modal" >            
+            <div id="contact" class="contact" style="float:left">
                 <form id="email" method="post">
                     <h2 style="font-size:47px;">Contact Me</h2>
                     <p style="font-size:20px; margin-right:445px;">Name</p>
@@ -86,9 +86,9 @@
                     <p style="font-size:20px; margin-right:425px;">Message</p>
                     <br>
                     <textarea rows="15" cols="53" style="font-size:18px;" required></textarea>
-                    <a class="popup-close" data-popup-close="contactform" href="#">X</a>
                     <br><br>
                     <button type="button" value="submit" onclick="submitEmail()">Submit</button>   
+                    <button id="close" type="button" value="close" >Close</button> 
                 </form>
             </div>
             
