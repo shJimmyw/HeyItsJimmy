@@ -76,6 +76,22 @@ button{
 }
 button:hover{
     background-color:#0C1F41;
+    
+}
+
+.mail{
+    color:white;
+    background-color:#727272;
+    text-align:center;
+    display:inline-block;
+    border:none;
+    font-size:26px;
+    padding: 14px 28px;
+    margin-left:14px; 
+}
+
+.mail:hover{
+    background-color:#A4A3A3;
 }
 
 .modal{
@@ -96,15 +112,14 @@ button:hover{
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
-    background:white;   
+    background:#7F7E7E;   
     border-width: 2px;
     border-bottom-width:42px;
-    border-bottom-color:#354B73;
+    border-bottom-color:#7F7E7E;
     border-bottom-style: solid;
     border-top-width:42px;
-    border-top-color:#354B73;
+    border-top-color:#7F7E7E;
     border-top-style: solid;
-    border-radius:29px;
 }
 
 .popup-close{
@@ -135,6 +150,7 @@ input{
     margin-right:300px;
     font-family:verdana;
     margin:17px;
+    margin-bottom:0px; 
     height:31px;
     font-size:16px;
 }

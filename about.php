@@ -92,16 +92,19 @@
             <button style="margin-top: 22px;" type="button">Resume</button>
         </p>
         
-        <div id="modal" class="modal" >            
+        <div id="modal" class="modal" >
+            
             <div id="contact" class="contact" style="float:left">
                 <form id="email" method="post">
+               <!--     <div style="position:relative; float:left; left:46px;font-size:43px; font-family:Arial;">Contact Me!</div>
+                    <br><br><br>-->
                     <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="E-Mail" required>
                     <br><br>
                     <textarea rows="15" cols="53" placeholder="Message" required></textarea>
-                    <br><br>
-                    <button type="button" value="submit" onclick="submitEmail()">Submit</button>   
-                    <button id="close" type="button" value="close" >Close</button> 
+                    <br><br><br><br><br><br>
+                    <button class="mail" type="button" value="submit" onclick="submitEmail()">Submit</button>   
+                    <button id="close" class="mail" type="button" value="close" >Close</button> 
                 </form>
             </div>
             
