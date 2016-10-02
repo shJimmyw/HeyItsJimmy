@@ -23,17 +23,37 @@
             window.onload = function(){
                 document.getElementById("msg").onclick = function(){
                     $('#modal').fadeIn(350);
+                    $('topside').fadeIn(350);
                 };
-        //        document.getElementById("close").onclick = function(){
-        //            $('#modal').fadeOut(350);
-         //       };
                 $(document).on('click',"#close", function(){
                     $('#modal').fadeOut(350);
+                    $('topside').fadeOut(350);
+                });
+                $(document).on('click',"#sub_close", function(){
+                    $('#modal').fadeOut(350);
+                    $("#contact").html("\n\
+                       <form id='email' method='post'>\n\
+                       <h2 style='font-size:47px;'>Contact Me</h2>\n\
+                       <p style='font-size:20px; margin-right:445px;'>Name</p>\n\
+                       <br>\n\
+                       <input type='text' name='name' required>\n\
+                       <br>\n\
+                       <p style='font-size:20px; margin-right:445px;'>Email</p>\n\
+                       <br>\n\
+                       <input type='email' name='email' required>\n\
+                       <br>\n\
+                       <p style='font-size:20px; margin-right:425px;'>Message</p>\n\
+                       <br>\n\
+                       <textarea rows='15' cols='53' style='font-size:18px;' required></textarea>\n\
+                       <br><br>\n\
+                       <button type='button' value='submit' onclick='submitEmail()'>Submit</button>   \n\
+                       <button id='close' type='button' value='close' >Close</button> \n\
+                       </form>");
                 });
             };
             function submitEmail(){
                 if(document.forms['email'].checkValidity()){
-                    $("#contact").html("<p>Thanks for your message!</p><button id='close' type='button' value='close' >Close</button>");
+                    $("#contact").html("<p>Thanks for your message!</p><button id='sub_close' type='button' value='close' >Close</button>");
                 }
             }
         </script>
@@ -71,21 +91,14 @@
             <button style="margin-top: 22px;" type="button" id="msg" class="msg">Contact</button>
             <button style="margin-top: 22px;" type="button">Resume</button>
         </p>
+        
         <div id="modal" class="modal" >            
             <div id="contact" class="contact" style="float:left">
                 <form id="email" method="post">
-                    <h2 style="font-size:47px;">Contact Me</h2>
-                    <p style="font-size:20px; margin-right:445px;">Name</p>
-                    <br>
-                    <input type="text" name="name" required>
-                    <br>
-                    <p style="font-size:20px; margin-right:445px;">Email</p>
-                    <br>
-                    <input type="email" name="email" required>
-                    <br>
-                    <p style="font-size:20px; margin-right:425px;">Message</p>
-                    <br>
-                    <textarea rows="15" cols="53" style="font-size:18px;" required></textarea>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="E-Mail" required>
+                    <br><br>
+                    <textarea rows="15" cols="53" placeholder="Message" required></textarea>
                     <br><br>
                     <button type="button" value="submit" onclick="submitEmail()">Submit</button>   
                     <button id="close" type="button" value="close" >Close</button> 
