@@ -1,27 +1,33 @@
-<html>
+<html lang="en">
     <head>
         <title>Hey Its Jimmy</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="Styler.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
    
     <body>
         <script>
             $(document).ready(function(){
-                $("#pre1").hide();
-                $("#pre2").hide();
+                $("#desc").hide();
                 $("#button").hide();
-                $("#pre1").fadeIn(1700);
-                $("#pre2").fadeIn(1700);
+                $("#desc").fadeIn(1700);
                 $("#button").fadeIn(1700);
             });
         </script>
-        <h1><br>Jimmy Wu</h1>
-        <pre id="pre2"><br><br>Developer - Enthusiast - Web Designer
-        </pre>
-        <br><br><br> 
+        <div class="container-fluid">
+            <h1><br>Jimmy Wu</h1>
+            <br> 
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div id="desc" class="col-lg-4">Developer - Tech Enthusiast - Web Designer</div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+        <br><br>
         <button id="about-button" type="button" onclick='window.location.href="about.php"'>About</button>
         <button id="blog-button" type="button" onclick='window.location.href="blog.html"'>Blog</button>
     </body>

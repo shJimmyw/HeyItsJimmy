@@ -43,12 +43,12 @@ p{
     display:inline;
 
 }
-pre{
+#desc{
     color:#19263C;
     font-size:21px;
     text-align:center;  
     display:inline;
-    font-family:verdana;
+    font-family:arial;
 }
 
 #section{
@@ -88,6 +88,7 @@ button:hover{
     font-size:26px;
     padding: 14px 28px;
     margin-left:14px; 
+    opacity:1;
 }
 
 .mail:hover{
@@ -106,7 +107,7 @@ button:hover{
 
 .contact{
     max-width:700px;
-    height:450px;
+    height:500px;
     width:90%;
     position:absolute;
     top:50%;
