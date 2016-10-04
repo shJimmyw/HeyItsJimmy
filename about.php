@@ -34,17 +34,16 @@
                 $(document).on('click',"#sub_close", function(){
                     $('#modal').fadeOut(350);
                     $("#contact").html("\n\
-                       <form id='email' method='post'>\n\
-                       <input type='text' name='name' required>\n\
-                       <br>\n\
-                       <br>\n\
-                       <input type='email' name='email' required>\n\
-                       <br>\n\
-                       <br>\n\
-                       <textarea rows='15' cols='53' style='font-size:18px;' required></textarea>\n\
-                       <br><br>\n\
-                       <button type='button' value='submit' onclick='submitEmail()'>Submit</button>   \n\
-                       <button id='close' type='button' value='close' >Close</button> \n\
+                        <h2 id='modal_header'>MESSAGE ME</h2>\n\
+                        <input type='text' id='form_name' name='name' placeholder='Name' required>\n\
+                        <br>\n\
+                        <input type='email' id='form_mail' name='email' placeholder='E-Mail' required>\n\
+                        <br><br>\n\
+                        <textarea id='form_msg' rows='12' cols='53'placeholder='Message' required></textarea>\n\
+                        <br>\n\
+                        <button id='mail' class='mail' type='button' value='submit' >SEND</button>\n\
+                        <a id='close' class='popup-close'  href='#'>X</a>\n\
+                        <br>\n\
                        </form>");
                 });
             };
@@ -65,7 +64,9 @@
                         if(!response.success){
                             alert('Failed to send');
                         } else {
-                            $("#contact").html("<p>Thanks for your message!</p><button id='sub_close' type='button' value='close' >Close</button>");
+                            $("#contact").html("\n\
+                                <p>Thanks for your message!</p>\n\
+                                <a id='sub_close' class='popup-close' href='#'>X</a>");
                         }
                     }
                 })
@@ -114,15 +115,20 @@
                 <form id="email" method="post">
                <!--     <div style="position:relative; float:left; left:46px;font-size:43px; font-family:Arial;">Contact Me!</div>
                     <br><br><br>-->
+                    <h2 id="modal_header">MESSAGE ME</h2>
                     <input type="text" id="form_name" name="name" placeholder="Name" required>
+                    <br>
                     <input type="email" id="form_mail" name="email" placeholder="E-Mail" required>
                     <br><br>
                     <textarea id="form_msg" rows="12" cols="53" placeholder="Message" required></textarea>
-                    <br><br><br><br><br>
-                    <button id="mail" class="mail" type="button" value="submit" >Submit</button>   
-                    <button id="close" class="mail" type="button" value="close" >Close</button> 
+                    <br>
+                    <button id="mail" class="mail" type="button" value="submit" >SEND</button>   
+                    <br>
+                    <a id="close" class="popup-close"  href="#">X</a>
+            <!--        <button id="close" class="mail" type="button" value="close" >Close</button> -->
                 </form>
             </div>
+            
         </div>
     </body>
 </html>
