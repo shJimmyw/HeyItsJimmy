@@ -8,7 +8,6 @@
         <link rel="stylesheet" type="text/css" href="Styler.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     </head>
     <body>
         <script>
@@ -72,17 +71,15 @@
                 })
             });
         </script>
-        
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
             <li><a href="about.html">About</a><li>
         </ul>
         <div class="container-fluid">
             <div id ="section">
-            
                 <p style="font-size:22px; color:white;">
-                    <br>
+                   <br>
                    Hey there and thanks for visiting, I'm Jimmy and I am a front-end developer 
                    freshly out of college. My passion is to learn new technology to develop amazing new
                    engage users in new ways. I am always looking to improve as a 
@@ -105,16 +102,12 @@
                 <a href = "http://linkedin.com/" ><img src="images/linkedinlogo.png" alt="Linkedin" hspace="2" align="center" width="200" height="45" border="0" ></a>
                 <a href = "http://github.com/shJimmyw" ><img src="images/GitHub.png" alt="Github" align="center" width="145" height="48" border="0" ></a>
                 <button style="margin-top: 22px;" type="button" id="msg" class="msg">Contact</button>
-                <button style="margin-top: 22px;" type="button">Resume</button>
+                <button style="margin-top: 22px;" type="button" onclick="window.open('images/resume.txt')">Resume</button> 
             </p>
-
-           
         </div>
         <div id="modal" class="modal" >
             <div id="contact" class="contact" style="float:left">
                 <form id="email" method="post">
-               <!--     <div style="position:relative; float:left; left:46px;font-size:43px; font-family:Arial;">Contact Me!</div>
-                    <br><br><br>-->
                     <h2 id="modal_header">MESSAGE ME</h2>
                     <input type="text" id="form_name" name="name" placeholder="Name" required>
                     <br>
@@ -125,10 +118,8 @@
                     <button id="mail" class="mail" type="button" value="submit" >SEND</button>   
                     <br>
                     <a id="close" class="popup-close"  href="#">X</a>
-            <!--        <button id="close" class="mail" type="button" value="close" >Close</button> -->
                 </form>
             </div>
-            
         </div>
     </body>
 </html>

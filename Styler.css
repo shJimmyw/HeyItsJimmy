@@ -4,6 +4,7 @@ body{
     background-image:url("images/Ocean.JPG");
     text-align:center;
 }
+
 ul{
     list-style-type:none;
     padding:0;
@@ -11,10 +12,12 @@ ul{
     background-color: #354B73;
     opacity:0.65;
 }
+
 li{
     display:inline;
     float:left;
 }
+
 li a {
     font-family:arial;
     font-size:20px;
@@ -24,9 +27,11 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
+
 li a:hover {
     background-color:#0C1F41;
 }
+
 h1{
     color:#19263C;
     font-size:160px;
@@ -76,7 +81,6 @@ button{
 
 button:hover{
     background-color:#0C1F41;
-    
 }
 
 .mail{
@@ -131,23 +135,22 @@ button:hover{
 }
 
 .popup-close{
-    width:60px;
-    height:60px;
+    width:15px;
+    height:30px;
     padding-top:4px;
     display:inline-block;
     position:absolute;
     top:0px;
     right:0px;
     transition:ease 0.25s all;
-    transform:translate(32%, -77%);
+    transform:translate(-7%, -159%);
     border-radius:1000px;
     font-size:20px;
     text-align:center;
     line-height:100%;
     color:black;
-    font-size:24
+    font-size:24px;
 }
-
 
 .popup-close:hover{
     color:#354B73;
