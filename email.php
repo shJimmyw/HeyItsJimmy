@@ -5,6 +5,7 @@
     } else {
         //mail($receiver, 'Mail From: ' . $_POST['name'] . '<' . $_POST['email'] . '>', $_POST['msg']);
         $response['success'] = true;
+        $response['name'] = $_POST['name'];
     }
     echo json_encode($response);
 

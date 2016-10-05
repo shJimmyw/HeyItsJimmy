@@ -27,12 +27,13 @@
                     $('topside').fadeIn(350);
                 };
                 $(document).on('click',"#close", function(){
-                    $('#modal').fadeOut(350);
-                    $('topside').fadeOut(350);
+                    $('#modal').hide();
+                    $("#form_response").empty();
                 });
                 $(document).on('click',"#sub_close", function(){
-                    $('#modal').fadeOut(350);
+                    $('#modal').hide();
                     $("#contact").html("\n\
+                       <form id='email' method='post'> \n\
                         <h2 id='modal_header'>MESSAGE ME</h2>\n\
                         <input type='text' id='form_name' name='name' placeholder='Name' required>\n\
                         <br>\n\
@@ -44,6 +45,7 @@
                         <a id='close' class='popup-close'  href='#'>X</a>\n\
                         <br>\n\
                        </form>");
+                    document.getElementById("contact").style.height = "650px";
                 });
             };
             $(document).on('click',"#mail",function(){
@@ -53,22 +55,25 @@
                         email: $("#form_mail").val(),
                         msg: $("#form_msg").val()
                     };
-                }
-                $.ajax({
-                    type:"POST",
-                    url:"email.php",
-                    data:data,
-                    dataType: 'JSON',
-                    success:function(response){      
-                        if(!response.success){
-                            alert('Failed to send');
-                        } else {
-                            $("#contact").html("\n\
-                                <p>Thanks for your message!</p>\n\
-                                <a id='sub_close' class='popup-close' href='#'>X</a>");
+                    $.ajax({
+                        type:"POST",
+                        url:"email.php",
+                        data:data,
+                        dataType: 'JSON',
+                        success:function(response){      
+                            if(!response.success){
+                                alert('Failed to send');
+                            } else {
+                                $("#contact").html("\n\
+                                    <p>Thanks " + response.name +" for your message!</p>\n\
+                                    <a id='sub_close' class='popup-close' href='#'>X</a>");
+                                document.getElementById("contact").style.height = "190px";
+                            }
                         }
-                    }
-                })
+                    })
+                } else {
+                    $("#form_response").html("Missing Name, E-Mail, or Message!");
+                }
             });
         </script>
         <ul>
@@ -95,8 +100,7 @@
                    development for implementing php. 
                    <br><br> 
                 </p>
-                <br><br>
-                <br><br>
+                <br><br><br><br>
             </div>
             <p id="links" style="font-size:22px; color:white; margin: 22px;">           
                 <a href = "http://linkedin.com/" ><img src="images/linkedinlogo.png" alt="Linkedin" hspace="2" align="center" width="200" height="45" border="0" ></a>
@@ -114,9 +118,8 @@
                     <input type="email" id="form_mail" name="email" placeholder="E-Mail" required>
                     <br><br>
                     <textarea id="form_msg" rows="12" cols="53" placeholder="Message" required></textarea>
-                    <br>
-                    <button id="mail" class="mail" type="button" value="submit" >SEND</button>   
-                    <br>
+                    <button id="mail" class="mail" type="button" value="submit" >SEND</button>                    
+                    <div id="form_response" style="color:red;"></div>
                     <a id="close" class="popup-close"  href="#">X</a>
                 </form>
             </div>

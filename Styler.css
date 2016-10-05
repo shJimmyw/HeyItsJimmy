@@ -93,7 +93,8 @@ button:hover{
     padding: 14px 28px;
     margin-left:0px; 
     opacity:1;
-    width:550
+    width:550;
+    margin:10px;
 }
 
 .mail:hover{
@@ -129,7 +130,7 @@ button:hover{
     border-bottom-width:42px;
     border-bottom-color:white;
     border-bottom-style: solid;
-    border-top-width:42px;
+    border-top-width:10px;
     border-top-color:white;
     border-top-style: solid;
 }
@@ -143,7 +144,7 @@ button:hover{
     top:0px;
     right:0px;
     transition:ease 0.25s all;
-    transform:translate(-7%, -159%);
+    transform:translate(-7%, -48%);
     border-radius:1000px;
     font-size:20px;
     text-align:center;
