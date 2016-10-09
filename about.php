@@ -22,10 +22,14 @@
                 $("#links").fadeIn(1470);
             });        
             window.onload = function(){
-                document.getElementById("msg").onclick = function(){
+      //          document.getElementById("msg").onclick = function(){
+      //              $('#modal').fadeIn(350);
+      //              $('topside').fadeIn(350);
+      //          };
+                $(document).on('click', "#msg", function(){
                     $('#modal').fadeIn(350);
                     $('topside').fadeIn(350);
-                };
+                })
                 $(document).on('click',"#close", function(){
                     $('#modal').hide();
                     $("#form_response").empty();
@@ -79,7 +83,7 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="Portfolio.html">Portfolio</a></li>
-            <li><a href="about.html">About</a><li>
+            <li><a href="about.php">About</a><li>
         </ul>
         <div class="container-fluid">
             <div id ="section">
